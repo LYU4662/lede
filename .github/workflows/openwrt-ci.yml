@@ -108,7 +108,7 @@ jobs:
 
       - name: Make download
         run: |
-          make download -j8 || make V=s -j$(nproc)
+          make download -j8 || make V=s -j1
           rm -rf $(find ./dl/ -size -1024c)
           df -h
 
